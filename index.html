@@ -15,10 +15,10 @@
 <body>
     <div class="root">
         <div class="container h1">
-            Generate Random User Information for Testing            
+            Generate Random User Information for Testing
         </div>
         <div class="root-child">
-            <form class="container l-boxed">
+            <div class="container l-boxed"><!--form 1-->
                 <div class="">
                     <div class="h3">
                         Constraints
@@ -36,6 +36,10 @@
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="includePassword">
                                 <label class="form-check-label">Include password</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="asJsonObject">
+                                <label class="form-check-label">As Json object</label>
                             </div>
                         </div>
                         <div class="divRight">
@@ -56,39 +60,59 @@
                     <div class="constraints-footer">
                         <button class="btn btn-primary genBtn" id="generateData">Generate Information</button>
                     </div>
-                </div>               
-            </form>
-            <form class="container r-boxed">
+                </div>
+            </div>
+            <div class="container r-boxed"><!--form 2-->
                 <div class="form-group">
                     <div class="input-group">
                         <label class="badge label-form">name: </label>
-                        <input type="text" class="form-control" id="full_name">
+                        <input type="text" class="form-control" id="full_name" readonly>
                         <button class="btn btn-primary" id="copyName">Copy</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <label class="badge label-form">email: </label>
-                        <input type="text" class="form-control" id="email">
+                        <input type="text" class="form-control" id="email" readonly>
                         <button class="btn btn-primary" id="copyEmail">Copy</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <label class="badge label-form">password: </label>
-                        <input type="text" class="form-control" id="password">
+                        <input type="text" class="form-control" id="password" readonly>
                         <button class="btn btn-primary" id="copyPassword">Copy</button>
                     </div>
                 </div>
                 <div class="log-in">
                     <button class="btn btn-primary" id="log_in">Log in</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
-    <div class="container text_area">
-        text to be shown here
+    <div class="lower-div">
+        <div class="container l-div">
+            <div class="container">
+                &lt;Click to copy all data &gt;<br>                
+            </div>
+            <div class="div">
+                <code id="jsonArea">
+                    public void exceptionExample(){<br>
+                        import java.util.Scanner;<br>
+                        System.out.println("Hello world!");<br>
+                        try{<br>
+                            Thread.sleep(1000);<br>
+                        }catch(Exception ex){<br>
+                            ex.printStackTrace()<br>
+                        }<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+        <div class="container r-div">
+            <img src="https://www.w3schools.com/css/img_mountains.jpg" alt="user_img" width="75" height="auto" id="userDP">
+        </div>
     </div>
-    <script type="javascript/text" src="./lib/js/script.js">
 </body>
+<script src="./lib/js/script.js" type="javascript/text"></script>
 </html>
