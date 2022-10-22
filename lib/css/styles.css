@@ -93,6 +93,7 @@ input{
     align-items: center;
 }
 .lower-div{
+    padding-bottom: 2px;
     margin-top: 8px;
     display: flex;
 }
